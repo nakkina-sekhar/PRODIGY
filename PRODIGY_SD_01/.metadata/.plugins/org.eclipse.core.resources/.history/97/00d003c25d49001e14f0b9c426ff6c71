@@ -1,0 +1,40 @@
+package com.dto.classes;
+
+public class TemperatureConversionRequest {
+    private double value;
+    private String originalUnit;
+    
+	public TemperatureConversionRequest() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public TemperatureConversionRequest(double value, String originalUnit) {
+		super();
+		this.value = value;
+		this.originalUnit = originalUnit;
+	}
+
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
+	public String getOriginalUnit() {
+		return originalUnit;
+	}
+
+	public void setOriginalUnit(String originalUnit) {
+		this.originalUnit = originalUnit;
+	}
+
+	@Override
+	public String toString() {
+		return "TemperatureConversionRequest [value=" + value + ", originalUnit=" + originalUnit + "]";
+	}
+    
+    
+}

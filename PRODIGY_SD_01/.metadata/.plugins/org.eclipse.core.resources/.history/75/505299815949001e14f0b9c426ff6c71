@@ -1,0 +1,40 @@
+package com.temp.controller;
+    import org.springframework.stereotype.Controller;
+	import org.springframework.ui.Model;
+	import org.springframework.web.bind.annotation.GetMapping;
+	import org.springframework.web.bind.annotation.PostMapping;
+	import org.springframework.web.bind.annotation.RequestParam;
+
+	@Controller
+	public class TemperatureConversionController {
+
+	    private final TemperatureConversionService conversionService;
+
+	    public TemperatureConversionController(TemperatureConversionService conversionService) {
+	        this.conversionService = conversionService;
+	    }
+
+	    @GetMapping("/")
+	    public String index() {
+	        return "index";
+	    }
+
+	    @PostMapping("/convert")
+	    public String convertTemperature(
+	            @RequestParam double temperature,
+	            @RequestParam String fromUnit,
+	            Model model) {
+	        double celsius = conversionService.convertToCelsius(temperature, fromUnit);
+	        double fahrenheit = conversionService.convertToFahrenheit(celsius);
+	        double kelvin = conversionService.convertToKelvin(celsius);
+
+	        model.addAttribute("celsius", celsius);
+	        model.addAttribute("fahrenheit", fahrenheit);
+	        model.addAttribute("kelvin", kelvin);
+
+	        return "result";
+	    }
+	}
+
+
+

@@ -1,0 +1,8 @@
+package com.dto.classes;
+
+public class TemperatureConversionRequest {
+    private double value;
+    private String originalUnit;
+    
+    
+}

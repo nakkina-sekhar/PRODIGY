@@ -1,0 +1,5 @@
+package com.dto.classes;
+
+public class TemperatureConversionRequest {
+
+}

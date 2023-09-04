@@ -1,0 +1,13 @@
+package com.prodigy;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class TemperatureconversionApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

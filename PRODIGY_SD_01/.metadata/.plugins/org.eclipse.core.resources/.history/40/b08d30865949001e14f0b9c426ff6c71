@@ -1,0 +1,23 @@
+package com.temp.service;
+import org.springframework.stereotype.Service;
+
+	@Service
+	public class TemperatureConversionService {
+
+	    public double convertToCelsius(double temperature, String fromUnit) {
+	        // Implement the conversion logic based on the "fromUnit" provided
+	        // For example, if fromUnit is Fahrenheit, convert it to Celsius.
+	        // Similarly, handle Kelvin to Celsius conversion.
+	    }
+
+	    public double convertToFahrenheit(double celsius) {
+	        // Implement the Celsius to Fahrenheit conversion logic
+	    }
+
+	    public double convertToKelvin(double celsius) {
+	        // Implement the Celsius to Kelvin conversion logic
+	    }
+	}
+
+
+

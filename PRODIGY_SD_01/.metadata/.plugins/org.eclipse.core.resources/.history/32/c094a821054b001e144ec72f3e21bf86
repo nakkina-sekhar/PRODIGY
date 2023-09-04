@@ -1,0 +1,17 @@
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Conversion Result</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+     <div class="result-container">
+	<h1>Conversion Result</h1>
+    <p>Celsius: <span th:text="${celsius}"></span></p>
+    <p>Fahrenheit: <span th:text="${fahrenheit}"></span></p>
+    <p>Kelvin: <span th:text="${kelvin}"></span></p>
+    <a href="/">Back to Conversion</a>
+    </div>
+</body>
+</html>

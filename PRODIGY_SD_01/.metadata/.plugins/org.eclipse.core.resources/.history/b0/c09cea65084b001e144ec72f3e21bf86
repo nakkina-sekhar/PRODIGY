@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Conversion</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}" href="/css/styles.css">
+</head>
+<body>
+    <h1>Temperature Conversion</h1>
+    <form action="/convert" method="post">
+        <label for="inputValue">Enter Temperature:</label>
+        <input type="number" step="0.01" id="inputValue" name="inputValue" required>
+        <br>
+        <label for="inputUnit">Select Unit:</label>
+        <select id="inputUnit" name="inputUnit">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        <br>
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>

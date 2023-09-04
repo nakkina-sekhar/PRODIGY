@@ -1,0 +1,45 @@
+ import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class TemperatureConversionController {
+
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
+
+    @PostMapping("/convert")
+    public String convertTemperature(
+        @RequestParam("inputValue") double inputValue,
+        @RequestParam("inputUnit") String inputUnit,
+        Model model
+    ) {
+        double celsius = 0.0;
+        double fahrenheit = 0.0;
+        double kelvin = 0.0;
+
+        if (inputUnit.equalsIgnoreCase("Celsius")) {
+            celsius = inputValue;
+            fahrenheit = TemperatureConverter.celsiusToFahrenheit(inputValue);
+            kelvin = TemperatureConverter.celsiusToKelvin(inputValue);
+        } else if (inputUnit.equalsIgnoreCase("Fahrenheit")) {
+            celsius = TemperatureConverter.fahrenheitToCelsius(inputValue);
+            fahrenheit = inputValue;
+            kelvin = TemperatureConverter.fahrenheitToKelvin(inputValue);
+        } else if (inputUnit.equalsIgnoreCase("Kelvin")) {
+            celsius = TemperatureConverter.kelvinToCelsius(inputValue);
+            fahrenheit = TemperatureConverter.kelvinToFahrenheit(inputValue);
+            kelvin = inputValue;
+        }
+
+        model.addAttribute("celsius", celsius);
+        model.addAttribute("fahrenheit", fahrenheit);
+        model.addAttribute("kelvin", kelvin);
+
+        return "result";
+    }
+}

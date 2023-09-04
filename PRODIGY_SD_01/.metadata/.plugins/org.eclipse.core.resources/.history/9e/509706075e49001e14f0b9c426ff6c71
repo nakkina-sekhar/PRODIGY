@@ -1,0 +1,39 @@
+package com.prodigy;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+	@RequestMapping("/temperature")
+	public class TemperatureController {
+
+	    @PostMapping("/convert")
+	    public TemperatureConversionResponse convertTemperature(@RequestBody TemperatureConversionRequest request) {
+	        double inputValue = request.getValue();
+	        String originalUnit = request.getOriginalUnit();
+	        TemperatureConversionResponse response = new TemperatureConversionResponse();
+
+	        switch (originalUnit) {
+	            case "Celsius":
+	                response.setFahrenheit(TemperatureConverter.celsiusToFahrenheit(inputValue));
+	                response.setKelvin(TemperatureConverter.celsiusToKelvin(inputValue));
+	                break;
+	            case "Fahrenheit":
+	                response.setCelsius(TemperatureConverter.fahrenheitToCelsius(inputValue));
+	                response.setKelvin(TemperatureConverter.fahrenheitToKelvin(inputValue));
+	                break;
+	            case "Kelvin":
+	                response.setCelsius(TemperatureConverter.kelvinToCelsius(inputValue));
+	                response.setFahrenheit(TemperatureConverter.kelvinToFahrenheit(inputValue));
+	                break;
+	            default:
+	                // Handle invalid input
+	                break;
+	        }
+
+	        return response;
+	    }
+	}
+
+
