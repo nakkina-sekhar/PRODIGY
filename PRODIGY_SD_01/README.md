@@ -27,7 +27,7 @@ Before running the application, ensure you have the following installed:
 
 1. Clone or download this repository to your local machine:
 
- git clone link
+ git clone https://github.com/nakkina-sekhar/PRODIGY/tree/main/PRODIGY_SD_01
 
 2. Navigate to the project directory:
 
