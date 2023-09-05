@@ -4,7 +4,9 @@
 
 This is a simple Spring Boot application that provides a web interface for converting temperatures between Celsius, Fahrenheit, and Kelvin scales. Users can input a temperature value and select the original unit of measurement, and the application will perform the conversion and display the results.
 ## Screenshot
- (click here for screenshot)[/screenshots/img1.PNG]
+ [click here for screenshot](/screenshots/img1.PNG)
+ [click here for screenshot](/screenshots/img2.PNG)
+ 
 
 ## Features
 
