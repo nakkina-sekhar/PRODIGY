@@ -1,0 +1,18 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Guess the Number</h1>
+        <p class="message" th:text="${message}"></p>
+        <form method="post" action="/guess" class="guess-form">
+            <input type="number" name="guess" required class="guess-input" placeholder="Enter your guess">
+            <button type="submit" class="guess-button">Guess</button>
+        </form>
+    </div>
+</body>
+</html>
