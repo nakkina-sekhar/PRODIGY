@@ -4,6 +4,9 @@
 
 This is a simple Spring Boot application that provides a web interface for converting temperatures between Celsius, Fahrenheit, and Kelvin scales. Users can input a temperature value and select the original unit of measurement, and the application will perform the conversion and display the results.
 ## Screenshot
+ ![click here for screenshot](https://github.com/nakkina-sekhar/PRODIGY/tree/main/PRODIGY_SD_01/screenshots#:~:text=.metadata-,screenshots,-img1.PNG)
+ 
+ 
 
 ## Features
 
@@ -24,7 +27,7 @@ Before running the application, ensure you have the following installed:
 
 1. Clone or download this repository to your local machine:
 
- git clone link
+ git clone https://github.com/nakkina-sekhar/PRODIGY/tree/main/PRODIGY_SD_01
 
 2. Navigate to the project directory:
 
